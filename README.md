@@ -8,20 +8,17 @@
 ```
 
 ## Options ##
-1.Set **framework**( yii, symfony, laravel )
-
+1. Set **framework**( yii, symfony, laravel )
 ```
     -f=$name / --framework=$name
 ```
 
 2. Set **alias** of your git repository
-
 ```
     -a=$name / --alias=$name
 ```
 
 3. Set **branch** name of your git repository
-
 ```
     -b=$name / --branch=$name
 ```
