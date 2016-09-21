@@ -1,5 +1,4 @@
 #!/bin/bash
-
 #default configuration
 framework='yii'
 gitAlias='origin'
