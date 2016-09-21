@@ -2,7 +2,7 @@
 
 #default configuration
 framework='yii'
-alias='origin'
+gitAlias='origin'
 branch='master'
 
 #seting configuration from command line
@@ -10,13 +10,13 @@ for i in "$@"
 do
 	case $i in
 	    -f=*|--framework=*) framework="${i#*=}" ;;
-	    -a=*|--alias=*) alias="${i#*=}" ;;
+	    -a=*|--alias=*) gitAlias="${i#*=}" ;;
 		-b=*|--branch=*) branch="${i#*=}"
 	esac
 done
 
 #downloading form repo
-git pull $alias $branch
+git pull $gitAlias $branch
 
 #selecting migration command
 case "$framework" in
