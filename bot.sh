@@ -8,11 +8,11 @@ branch='master'
 #seting configuration from command line
 for i in "$@"
 do
-	case $i in
-	    -f=*|--framework=*) framework="${i#*=}" ;;
-	    -a=*|--alias=*) gitAlias="${i#*=}" ;;
-		-b=*|--branch=*) branch="${i#*=}"
-	esac
+    case $i in
+        -f=*|--framework=*) framework="${i#*=}" ;;
+        -a=*|--alias=*) gitAlias="${i#*=}" ;;
+        -b=*|--branch=*) branch="${i#*=}" ;;
+    esac
 done
 
 #downloading form repo
@@ -20,10 +20,10 @@ git pull $gitAlias $branch
 
 #selecting migration command
 case "$framework" in
-	"yii" ) migrate=`php yii migrate --interactive=0` ;;
-	"symfony" ) migrate=`./symfony doctrine:migrate` ;;
-	"laravel" ) migrate=`php artisan migrate --force` ;;
-	*) echo "You must set your framework!!" exit
+    "yii" ) migrate=`php yii migrate --interactive=0` ;;
+    "symfony" ) migrate=`./symfony doctrine:migrate` ;;
+    "laravel" ) migrate=`php artisan migrate --force` ;;
+    *) echo "You must set your framework!!" exit
 esac
 
 #last commit message
